@@ -8,27 +8,80 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Главная</title>
 </head>
-<body>
-    <header>
-        <div class="w-full flex">
-            <div id="mobile__nav" class="bg-figmabg1 fixed top-0 right-0 flex flex-col h-screen w-full md:w-1/2 pt-12 transform translate-x-full transition duration-300 ease-in-out z-30">
-                <svg id="toggler__expanded" class="text-black w-6 h-6 top-4 left-4 cursor-pointer ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                </svg>
-                <div class="flex flex-col h-full mt-4 p-4">
-                    <a href="" class="uppercase my-5">All products</a>
-                    <a href="" class="uppercase my-5">Solutions</a>
-                    <a href="" class="uppercase my-5">About</a>
-                    <a href="" class="uppercase my-5">Support</a> 
-                </div>
-            </div>
-            <div class="w-full h-screen fixed top-0 right-0 hidden z-10 bg-gray-900 opacity-70" id="overlay"></div>
-        </div>
+<body class="bg-[#CBCDF3]">
+    <header class="bg-[#A7A1E9] flex items-center justify-center py-2">
+        <a href=""><img src="Assets/Images/header/logo.png" alt="" class="w-64"></a>
     </header>  
 
-    <footer></footer>
+    <div class="w-full gap-6 flex flex-col text-xl relative">
+        <p class="text-center text-2xl pt-8">Популярные блюда</p>
+        <div class="flex flex-col w-2/12 h-fit absolute -top-[52px] z-50 bg-gradient-to-b from-[#797DD6] to-[#9779D6] rounded-xl">
+            <button type="button" class="px-4 py-3 border-black text-xl" id="filter">Фильтр</button>
+            <div class="hidden" id="filters">
+                <div class="flex flex-col overflow-hidden">
+                    <button type="button" class="px-4 py-3 hover:delay-100 transition-all duration-500 hover:scale-110 border-b border-black">Все блюда</button>
+                    <button type="button" class="px-4 py-3 hover:delay-100 transition-all duration-500 hover:scale-110 border-b border-black">Супы</button>
+                    <button type="button" class="px-4 py-3 hover:delay-100 transition-all duration-500 hover:scale-110 border-b border-black">Блюда из теста</button>
+                    <button type="button" class="px-4 py-3 hover:delay-100 transition-all duration-500 hover:scale-110 border-b border-black">Салаты</button>
+                    <button type="button" class="px-4 py-3 hover:delay-100 transition-all duration-500 hover:scale-110 border-b border-black">Сладости</button>
+                    <button type="button" class="px-4 py-3 hover:delay-100 transition-all duration-500 hover:scale-110 border-b border-black">Блюда из мяса</button>
+                    <button type="button" class="px-4 py-3 hover:delay-100 transition-all duration-500 hover:scale-110">Блюда из рыбы</button>
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-4 gap-8 grow px-4 py-10 text-lg">
+            <div class="flex flex-col items-center text-center gap-4">
+                <img src="Assets/Images/footer/1.png" class="rounded-xl w-full" alt="">
+                <p>Жаркое</p>
+            </div>
+            <div class="flex flex-col items-center text-center gap-4">
+                <img src="Assets/Images/footer/1.png" class="rounded-xl w-full" alt="">
+                <p>Жаркое</p>
+            </div>
+            <div class="flex flex-col items-center text-center gap-4">
+                <img src="Assets/Images/footer/1.png" class="rounded-xl w-full" alt="">
+                <p>Жаркое</p>
+            </div>
+            <div class="flex flex-col items-center text-center gap-4">
+                <img src="Assets/Images/footer/1.png" class="rounded-xl w-full" alt="">
+                <p>Жаркое</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mx-auto p-4 flex flex-col gap-6 items-center text-center">
+        <p class="text-2xl">Новые блюда</p>
+        <div class="grid grid-cols-4 grow gap-6 text-lg">
+            <div class="flex flex-col items-center text-center gap-4">
+                <img src="Assets/Images/footer/1.png" class="rounded-xl" alt="">
+                <p>Жаркое</p>
+            </div>
+            <div class="flex flex-col items-center text-center gap-4">
+                <img src="Assets/Images/footer/2.png" class="rounded-xl" alt="">
+                <p>Паста карбонара</p>
+            </div>
+            <div class="flex flex-col items-center text-center gap-4">
+                <img src="Assets/Images/footer/3.png" class="rounded-xl" alt="">
+                <p>Картофельная запеканка </p>
+            </div>
+            <div class="flex flex-col items-center text-center gap-4">
+                <img src="Assets/Images/footer/4.png" class="rounded-xl" alt="">
+                <p>Драники</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="flex items-center p-4 justify-between bg-[#A7A1E9]">
+        <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+            <span class="text-sm sm:text-center">
+                © 2023 <a href="" class="hover:underline transition-all duration-500 hover:delay-100">Fragfrant™</a>. All Rights Reserved.
+            </span>
+        </div>
+        <div class="flex items-center gap-4">
+            <a href=""><img src="Assets/Images/footer/vk.png" alt="" class="w-10 h-10"></a>
+        </div>
+    </footer>
     
-    <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
 	<script src="https://code.jquery.com/jquery-3.6.3.min.js" 
     integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
     crossorigin="anonymous"></script>
