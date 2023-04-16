@@ -14,3 +14,18 @@ $(".dropdown").each((i,el) => {
     list.slideToggle(500);
   });
 });
+
+/* filter */
+$(document).ready(function(){
+  $(".filter").click(function(){
+    var value = $(this).attr("data-filter");
+    var elem = $(".dropdown");
+    if(value == "all"){
+      $(elem).show("500");
+    }
+    else{
+      $(elem).not("."+value).hide("500");
+      $(elem).filter("."+value).show("500");
+    }
+  });
+})
